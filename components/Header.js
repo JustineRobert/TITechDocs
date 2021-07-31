@@ -18,11 +18,12 @@ function Header() {
     </div>
 
       <Button color="gray" buttonType="outline" rounded={true} iconOnly={true} ripple="dark" className="ml-5 md:ml-20 h-20 w-20 border-0">
-                  <Icon name="apps" size="3xl" color="gray" />
-              </Button>
+        <Icon name="apps" size="3xl" color="gray" />
+      </Button>
 
-              <img loading="lazy" className="cursor-pointer h-12 w-12 rounded-full ml-2"
-              src="https://lh3.googleusercontent.com/ogw/ADea4I5-nn4UsU5gThQjAgNpJZiEpPhSItiNGLwOx7yfsg=s32-c-mo" alt="TITech Africa Logo" />
+      <img loading="lazy" 
+      className="cursor-pointer h-12 w-12 rounded-full ml-2"
+      src="https://lh3.googleusercontent.com/ogw/ADea4I5-nn4UsU5gThQjAgNpJZiEpPhSItiNGLwOx7yfsg=s32-c-mo" alt="TITech Africa Logo" />
 
     </header>
   );
