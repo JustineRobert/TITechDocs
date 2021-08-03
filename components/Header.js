@@ -1,6 +1,10 @@
 import Button from "@material-tailwind/react/Button";
 import Icon from "@material-tailwind/react/Icon";
+import { useSession } from 'next-auth/client';
+import { signOut } from 'next-auth/client';
 function Header() {
+
+  const [session] = useSession();
   return (
     <header className="sticky top-0 z-50 flex items-center px-4 py-2 shadow-md bg-green-100">
       <Button color="gray" buttonType="outline" rounded={true} iconOnly={true} ripple="dark" className="h-20 w-20 border-0">
@@ -21,9 +25,12 @@ function Header() {
         <Icon name="apps" size="3xl" color="gray" />
       </Button>
 
-      <img loading="lazy" 
+      <img 
+      onClick={signOut}
+      loading="lazy" 
       className="cursor-pointer h-12 w-12 rounded-full ml-2"
-      src="https://lh3.googleusercontent.com/ogw/ADea4I5-nn4UsU5gThQjAgNpJZiEpPhSItiNGLwOx7yfsg=s32-c-mo" alt="TITech Africa Logo" />
+      src={session?.user?.image} alt="TITech Africa" 
+      />
 
     </header>
   );
